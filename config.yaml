@@ -3,4 +3,4 @@ languageCode: en-us
 title: Paul Rosania
 uglyurls: true
 permalinks:
-  posts: /writings/:year/:month/:day/:title
+  posts: /writings/:year/:month/:day/:slug

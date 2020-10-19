@@ -3,6 +3,7 @@ categories: null
 comments: true
 date: "2011-11-09T00:00:00Z"
 title: 'Don''t overload #nil?'
+slug: dont-overload-nil
 ---
 
 There's a popular post on Hacker News about writing confident code by, among

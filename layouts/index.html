@@ -1,7 +1,7 @@
 {{ define "main" }}
 <div id="home">
   <div class="posts">
-    {{ range $page := first 10 (where .Site.RegularPages "Section" "in" .Site.Params.mainSections)  }}
+    {{ range $page := first 10 (where .Site.RegularPages "Section" "in" .Site.Params.mainSections) }}
       <div class="post">
         <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
         <p class="meta">{{ .Date.Format "January 2, 2006" }}</p>

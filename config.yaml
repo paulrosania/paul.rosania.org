@@ -1,0 +1,6 @@
+baseURL: http://paul.rosania.org
+languageCode: en-us
+title: Paul Rosania
+uglyurls: true
+permalinks:
+  posts: /writings/:year/:month/:day/:title

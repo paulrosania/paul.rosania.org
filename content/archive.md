@@ -1,5 +1,5 @@
 ---
-title: "Archive / Paul Rosania"
+title: Archive
 layout: archive
 hidden: true
 type: posts

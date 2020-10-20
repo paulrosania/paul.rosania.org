@@ -1,0 +1,29 @@
+{{ define "main" }}
+<div class="archive">
+  <ul>
+    {{ $type := .Type }}
+    {{ $.Scratch.Set "count" 1 }}
+
+    {{ range (.Site.RegularPages.GroupByDate "2006") }}
+      {{ if (gt .Key 2000) }}
+
+        {{ range (where .Pages "Type" $type) }}
+          {{ if (eq ($.Scratch.Get "count") 1) }}
+            {{ $.Scratch.Set "count" 0 }}
+            <h3>{{ .Date.Format "2006" }}</h3>
+          {{ end }}
+        {{ end }}
+
+        {{ $.Scratch.Set "count" 1 }}
+
+        {{ range (where .Pages "Type" $type) }}
+          {{ if (ne .Params.draft true) }}
+            <div><a href="{{ .Permalink }}">{{ .Title }}</a></div>
+          {{ end }}
+        {{ end }}
+
+      {{ end }}
+    {{ end }}
+  </ul>
+</div>
+{{ end }}

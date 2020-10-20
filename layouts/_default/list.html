@@ -3,7 +3,7 @@
   <div class="posts">
     {{ range $page := first 10 (where .Site.RegularPages "Section" "in" .Site.Params.mainSections)  }}
       <div class="post">
-        <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
         <p class="meta">{{ .Date.Format "January 2, 2006" }}</p>
 
         <div class="body">
